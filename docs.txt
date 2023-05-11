@@ -1,0 +1,11 @@
+node_modules: chứa tất cả các libs trong project
+public: chứa file static (end user có thể nhìn thấy)
+src: chứa sources code xử lí code behind(logic back-end, nơi tạo ra components trong ứng dụng)
+gitignore: chứa quy tắc để bỏ qua folder or file khi upload lên github, gitlab or gitbug
+package.json: chứa thông tin cấu hình của project, nơi khai báo các libs được sử dụng trong dự án và chỉ dẫn quá trình thực thi
+
+---------------- Cách hoạt động --------------------
+src/index.js -> gọi components App (viết bằng JSX Javascript XML)
+    -> sử dụng thư viện Babel để convert từ JSX -> elements (HTML)
+    -> tạo ra 1 elements trong virtual DOM
+    -> render sử dụng thư viện react-dom chuyển đổi elements từ virtual DOM -> DOM và bổ sung element vào id = "root" của public/index.HTML
